@@ -1,0 +1,91 @@
+.btn {
+	display: block;
+	text-align: center;
+	text-decoration: none;
+	border: none;
+	outline: none;
+	cursor: pointer;
+	&:hover {
+		text-decoration: none;
+		
+	}
+}
+
+.btn-blue {
+	display: inline-block;
+	vertical-align: top;
+	width: 200px;
+	height: 40px;
+	font-family: @ff2;
+	font-size: 1rem;
+	text-align: center;
+	text-transform: uppercase;
+	color: #fff;
+	background: url('@{dir}btn-blue.png') no-repeat center;
+	background-size: contain;
+	border-radius: 5px;
+	&:hover {
+		color: #fff;
+		border: 1px solid rgb(103, 192, 249);
+		border-radius: 5px;
+		background-image: -webkit-linear-gradient(left, rgb(3,85,133) 0%, rgb(30,153,220) 100%);
+		background-image: -o-linear-gradient(left, rgb(3,85,133) 0%, rgb(30,153,220) 100%);
+		background-image: linear-gradient(to right, rgb(3,85,133) 0%, rgb(30,153,220) 100%);
+	}
+}
+
+.btn-orange {
+	display: inline-block;
+	vertical-align: top;
+	width: 191px;
+	height: 51px;
+	font-family: @ff2;
+	font-weight: 600;
+	font-size: 1.2rem;
+	text-align: center;
+	text-transform: uppercase;
+	color: #fff;
+	background: url('@{dir}btn-orange.png') no-repeat center;
+	background-size: contain;
+	margin-bottom: 15px;
+	border-radius: 5px;
+	&:hover {
+		color: #fff;
+		border: 1px solid rgb(140, 12, 12);
+		border-radius: 5px;
+	    background-image: -webkit-linear-gradient(left, rgb(248,151,72) 0%, rgb(251,208,77) 100%);
+	    background-image: -o-linear-gradient(left, rgb(248,151,72) 0%, rgb(251,208,77) 100%);
+	    background-image: linear-gradient(to right, rgb(248,151,72) 0%, rgb(251,208,77) 100%);
+	}
+}
+.btn-blueline {
+	display: inline-block;
+	vertical-align: top;
+	padding: 1.2rem 2rem;
+	color: @blue;
+	text-align: center;
+	background: none;
+	border: 1px solid @blue;
+	border-radius: 5px;
+	&:hover {
+		color: @blue;
+		border: 2px solid @blue;
+		padding: 1.1rem 1.9rem;
+	}
+}
+
+.btn-whiteline {
+	display: inline-block;
+	vertical-align: top;
+	border: 1px solid #fff;
+	font-size: 1.4rem;
+	color: #fff;
+	text-transform: uppercase;
+	padding: 1.4rem 6.4rem;
+	border-radius: 6px;
+	&:hover {
+		color: #fff;
+		border: 2px solid #fff;
+		padding: 1.3rem 6.3rem;
+	}
+}

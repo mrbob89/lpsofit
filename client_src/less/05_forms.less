@@ -1,0 +1,47 @@
+input, textarea, select {
+	box-sizing: border-box;
+	font-family: @ff1;
+	font-size: @fs;
+	font-weight: 700;
+	color: @text-color;
+	padding-left: 20px;
+  	border: none;
+  	outline: none;
+}
+input:focus::-webkit-input-placeholder, textarea:focus::-webkit-input-placeholder 		{opacity: 0; transition: opacity 0.3s ease;}
+input:focus::-moz-placeholder, textarea:focus::-moz-placeholder          				{opacity: 0; transition: opacity 0.3s ease;}
+input:focus:-moz-placeholder, textarea:focus:-moz-placeholder           				{opacity: 0; transition: opacity 0.3s ease;}
+input:focus:-ms-input-placeholder, textarea:focus:-ms-input-placeholder      			{opacity: 0; transition: opacity 0.3s ease;}
+
+.main-form {
+	margin-top: 2rem;
+	button {
+		width: 70%;
+		font-family: @ff1;
+		font-size: 1.8rem;
+		background: none;
+		padding-left: 0;
+		padding-right: 0;
+		text-transform: uppercase;
+		&:hover {
+			padding-left: 0;
+			padding-right: 0;
+		}
+	}
+	input {
+		width: 70%;
+		height: 4.5rem;
+		border-radius: 5px;
+		margin-bottom: 1.5rem;
+	}
+
+	textarea {
+		padding-top: 1rem;
+		width: 70%;
+		height: 10.5rem;
+		border-radius: 5px;
+		margin-bottom: 1.5rem;
+	}
+	
+	.placeholder(@ff1; 1.8rem; 300; @grey2)
+}

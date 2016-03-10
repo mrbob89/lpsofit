@@ -1,0 +1,42 @@
+html {
+	box-sizing: border-box;
+	font-size: @html-size-base;
+}
+*, *::after, *::before {
+	box-sizing: inherit;
+}
+body {
+	font-family: @ff1;
+}
+.container {
+	position: relative;
+}
+.clearfix:before,
+.clearfix:after {
+	content: "";
+	display: table;
+}   
+.clearfix:after {
+	clear: both;
+}   
+.clearfix {
+	zoom: l; /* For IE6 */
+}
+
+
+.nopadding {
+   padding: 0 !important;
+   margin: 0 !important;
+}
+.vcenter {
+    display: inline-block;
+    vertical-align: middle;
+    float: none;
+}
+.outer-vertical {
+	display: table;
+}
+.inner-vertical	{
+	display: table-cell;
+	vertical-align: middle;
+}
