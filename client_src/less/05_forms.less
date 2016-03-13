@@ -1,10 +1,10 @@
 input, textarea, select {
 	box-sizing: border-box;
-	font-family: @ff1;
+	font-family: @ff;
 	font-size: @fs;
-	font-weight: 700;
+	line-height: 1;
 	color: @text-color;
-	padding-left: 20px;
+	padding-left: 4.8rem;
   	border: none;
   	outline: none;
 }
@@ -14,27 +14,14 @@ input:focus:-moz-placeholder, textarea:focus:-moz-placeholder           				{opa
 input:focus:-ms-input-placeholder, textarea:focus:-ms-input-placeholder      			{opacity: 0; transition: opacity 0.3s ease;}
 
 .main-form {
-	margin-top: 2rem;
-	button {
-		width: 70%;
-		font-family: @ff1;
-		font-size: 1.8rem;
-		background: none;
-		padding-left: 0;
-		padding-right: 0;
-		text-transform: uppercase;
-		&:hover {
-			padding-left: 0;
-			padding-right: 0;
-		}
-	}
 	input {
-		width: 70%;
-		height: 4.5rem;
-		border-radius: 5px;
-		margin-bottom: 1.5rem;
+		width: 26rem;
+		height: 5.5rem;
+		border-radius: 10px;
+		margin-bottom: 1rem;
+		background-color: rgb(255, 255, 255);
+  		box-shadow: inset 0px 1px 0px 0px rgba(219, 219, 219, 0.8);
 	}
-
 	textarea {
 		padding-top: 1rem;
 		width: 70%;
@@ -42,6 +29,12 @@ input:focus:-ms-input-placeholder, textarea:focus:-ms-input-placeholder      			
 		border-radius: 5px;
 		margin-bottom: 1.5rem;
 	}
-	
-	.placeholder(@ff1; 1.8rem; 300; @grey2)
+	.placeholder(@ff; 1.6rem; 400; @grey);
+}
+
+.input--name {
+	background: url("@{dir}ico-user.png") no-repeat 5% 45%;
+}
+.input--phone {
+	background: url("@{dir}ico-phone.png") no-repeat 5% 45%;
 }

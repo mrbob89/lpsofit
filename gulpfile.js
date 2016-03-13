@@ -51,7 +51,10 @@ gulp.task('js', function () {
 });
 
 gulp.task('libs', function () {
-    return gulp.src(baseDir + '/libs/**/*.min.js')
+    return gulp.src([
+        baseDir + '/libs/**/*.min.js',
+            '!' + baseDir + '/libs/jquery{,/**}',
+        ])
         .pipe(gulpif(argv.libfile, concat('libs.js')))
         .pipe(gulp.dest(destDir + '/libs'));
 });
@@ -83,7 +86,7 @@ gulp.task('imagemin', () => {
                 {cleanupIDs: false}
             ]
         }))
-        .pipe(gulp.dest(destDir));
+        .pipe(gulp.dest(destDir + '/img'));
 });
 
 gulp.task( 'watch', function () {
@@ -97,9 +100,9 @@ gulp.task('serve', function () {
         server: destDir
     });
 
-    browserSync.watch(destDir + '**/*.*').on('change', browserSync.reload);
+    gulp.watch(destDir + '/**/*.*').on('change', browserSync.reload);
 });
 
-gulp.task('build', gulp.series('clean', 'copy-static', 'imagemin', 'css', 'js'));
-gulp.task('dev', gulp.series('build', gulp.parallel('watch','serve')));
-gulp.task('default', gulp.series('libs', 'dev'));
+gulp.task('build', gulp.series('copy-static', 'css', 'js'));
+gulp.task('dev', gulp.series('build', gulp.parallel('serve','watch')));
+gulp.task('default', gulp.series('dev'));

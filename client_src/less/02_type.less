@@ -5,7 +5,7 @@ p {
 	margin: @text-margin;
 }
 h1 {
-	.fs(@h1);
+	font-size: @h1; 
 	font-weight: 400; 
 	line-height: @lh; 
 	color: @text-color; 
@@ -55,13 +55,14 @@ a {
 		text-decoration: underline;
 	}
 }
-.main-headline {
-	font-family: @ff2;
-	.fs(@h2);
-	text-align: center;
-	text-transform: uppercase;
-	color: @blue;
-	margin-bottom: 5rem;
+
+section {
+	.container>h2 {
+		font-weight: 700;
+		text-transform: uppercase;
+		text-align: center;
+		color: #000;
+	}
 }
 
 .align-right {text-align: right;}
